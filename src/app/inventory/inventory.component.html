@@ -1,0 +1,28 @@
+<div class="main-container">
+  <div class="action-bar">
+    <span class="filter">Filter</span>
+    <span class="filter">Sort By</span>
+    <span class="filter">
+      <select name="cars">
+        <option>1</option>
+        <option>2</option>
+      </select>
+    </span>
+    <span class="edit">Edit</span>
+  </div>
+
+  <div class="cards-container">
+    <mat-card class="card" *ngFor="let card of cards">
+      <mat-card-title class="custom-title">{{card.title}}</mat-card-title>
+      <mat-card-subtitle class="custom-sub-title">{{card.description1}}|{{card.description2}}</mat-card-subtitle>
+      <mat-card-content class="custom-content">Managed by: {{card.managed_by}}</mat-card-content>
+      <mat-card-content class="info-down">
+        <div>{{card.location}}</div>
+        <br>
+        <div>Last Synced</div>
+        <div>{{card.sync_date}}</div>
+      </mat-card-content>
+      <img src="{{card.image}}" alt="Photo of a Shiba Inu" class="image">
+    </mat-card>
+</div>
+<mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>

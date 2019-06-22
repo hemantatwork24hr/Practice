@@ -1,0 +1,16 @@
+<h1>Welcome to {{title}}!</h1>
+<div class="container">
+  <nav class="navigation">
+      <span class="nav-items">
+        <a routerLinkActive="active" routerLink="list">List</a>
+      </span>
+      <span class="nav-items">
+        <a routerLinkActive="active" routerLink="create">Create</a>
+      </span>
+      <span class="nav-items">
+        <a routerLinkActive="active" routerLink="landing">Inventory</a>
+      </span>
+  </nav>
+  <router-outlet></router-outlet>
+  <div *ngIf="showLoadingIndicator" class="spinner"></div>
+</div>

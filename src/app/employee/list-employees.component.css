@@ -1,0 +1,40 @@
+.child {
+	flex: 1; /* additionally, equal width */	
+    color: #077DDB;
+    text-align: center;
+    background-color: white;
+    border:none;
+    border-right: 1px solid #077DDB;
+    cursor: pointer;
+	outline: none;
+	padding: 10px 0px 12px 0px;
+}
+
+.parent {
+	display: flex; /* equal height of the children */
+	border-radius: 10px;
+	border: solid 1px #077DDB;
+	transform: translate( 0, -50% );
+	font-family: Arial;
+	/* margin-left: 20%;
+	margin-right: 20%; */
+}
+
+.child.selected{
+    background-color: #077DDB;
+    color: white;
+    cursor: auto;
+}
+
+.child:first-of-type {
+    border-radius: 8px 0 0 8px;
+}
+
+.child:last-of-type {
+    border-radius: 0 8px 8px 0;
+    border-right: none; 
+}
+
+.container {
+	border: solid 1px black;
+}

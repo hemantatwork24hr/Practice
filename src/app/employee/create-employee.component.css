@@ -1,0 +1,29 @@
+.wrapper {
+	display: grid;
+	grid-template-rows: repeat(3, 10%);
+	grid-gap: 10px;
+	grid-auto-flow: column;
+	grid-auto-columns: 10% 10%;
+}
+
+.tabs {
+    /**
+    * Setting display to flex makes this container lay
+    * out its children using flexbox, the exact same
+    * as in the above "Stepper input" example.
+    */
+    display: flex;
+    border-bottom: 1px solid #D7DBDD;
+}
+  
+.tab {
+    cursor: pointer;
+    padding: 5px 30px;
+    color: #16A2D7;
+    font-size: 12px;
+    border-bottom: 2px solid transparent;
+}
+  
+.tab.is-tab-selected {
+    border-bottom-color: #4EBBE4;
+}
