@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { IEmployee } from './employee';
+import { MatSort } from '@angular/material';
 
 @Component( {
 	selector: 'list-employees',
@@ -19,20 +20,24 @@ export class ListEmployeesComponent implements OnInit, AfterViewInit {
 	public employees: IEmployee[];
 
 	displayedColumns: string[] = ['id', 'employee_name', 'employee_age', 'employee_salary'];
-	dataSource = new MatTableDataSource< IEmployee >( this.employees );
+	dataSource = new MatTableDataSource< IEmployee >( this._route.snapshot.data['employeeList'] );
   
+	@ViewChild( MatSort ) sort: MatSort;
+	
 	@ViewChild( MatPaginator, {static: true}) paginator: MatPaginator;
   
 	ngOnInit() {
-	    this.dataSource.paginator = this.paginator;
+		this.dataSource.paginator = this.paginator;
+		this.dataSource.sort = this.sort;
 	}
 
 	constructor( private _route: ActivatedRoute ) {
+		//this.employees = this._route.snapshot.data['employeeList'];
 		this.calculateMargin();
 	}
 
 	ngAfterViewInit() {
-		this.employees = this._route.snapshot.data['employeeList'];
+
 	}
 
 	displayContent( tab: string) {

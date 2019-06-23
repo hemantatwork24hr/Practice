@@ -16,8 +16,6 @@
 	border: solid 1px #077DDB;
 	transform: translate( 0, -50% );
 	font-family: Arial;
-	/* margin-left: 20%;
-	margin-right: 20%; */
 }
 
 .child.selected{
@@ -37,4 +35,8 @@
 
 .container {
 	border: solid 1px black;
+}
+
+table.mat-table {
+	width: 100%;
 }

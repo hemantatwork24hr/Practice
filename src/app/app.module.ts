@@ -11,7 +11,7 @@ import { EmployeeListResolverService } from './employee/employee-list-resolver.s
 import { InventoryService } from './inventory/inventory.service';
 import { InventoryComponent } from './inventory/inventory.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCardModule, MatPaginatorModule, MatTableModule } from '@angular/material';
+import { MatCardModule, MatPaginatorModule, MatTableModule, MatSortModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import { MatCardModule, MatPaginatorModule, MatTableModule } from '@angular/mate
     BrowserAnimationsModule,
     MatCardModule,
 	MatPaginatorModule,
-	MatTableModule
+	MatTableModule,
+	MatSortModule
   ],
   providers: [EmployeeService, EmployeeListResolverService, InventoryService ],
   bootstrap: [AppComponent]
