@@ -13,11 +13,11 @@ export class AppComponent {
 
   constructor( private _router: Router ) {
 	  this._router.events.subscribe( ( routerEvent: Event) => {
-		if( routerEvent instanceof NavigationStart ) {
+		if ( routerEvent instanceof NavigationStart ) {
 			this.showLoadingIndicator = true;
 		}
 
-		if( routerEvent instanceof NavigationEnd ||
+		if ( routerEvent instanceof NavigationEnd ||
 			routerEvent instanceof NavigationError ||
 			routerEvent instanceof NavigationCancel ) {
 				this.showLoadingIndicator = false;

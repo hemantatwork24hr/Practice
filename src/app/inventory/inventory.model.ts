@@ -4,5 +4,5 @@ class Inventory {
     phone: string;
     company: {
         name: string;
-    }
+    };
 }

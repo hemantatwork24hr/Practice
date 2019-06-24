@@ -2,12 +2,7 @@
   <div class="action-bar">
     <span class="filter">Filter</span>
     <span class="filter">Sort By</span>
-    <span class="filter">
-      <select name="cars">
-        <option>1</option>
-        <option>2</option>
-      </select>
-    </span>
+		<app-filter [count] = "getCountCards()"></app-filter>
     <span class="edit">Edit</span>
   </div>
 

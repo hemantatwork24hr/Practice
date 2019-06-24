@@ -1,0 +1,8 @@
+<p>
+	<span>Count: {{count}}</span>
+  <select (change) = "onSortByChanged()" [(ngModel)] = "selectedSortBy">	  
+	  	<option *ngFor="let sort of sortBy" id="{{sort}}" >
+		  {{sort}}
+		</option>
+  </select>
+</p>

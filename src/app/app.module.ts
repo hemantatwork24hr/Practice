@@ -12,13 +12,16 @@ import { InventoryService } from './inventory/inventory.service';
 import { InventoryComponent } from './inventory/inventory.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule, MatPaginatorModule, MatTableModule, MatSortModule } from '@angular/material';
+import { FilterComponent } from './inventory/filter.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateEmployeeComponent,
     ListEmployeesComponent,
-    InventoryComponent
+    InventoryComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { MatCardModule, MatPaginatorModule, MatTableModule, MatSortModule } from
     MatCardModule,
 	MatPaginatorModule,
 	MatTableModule,
-	MatSortModule
+	MatSortModule,
+	FormsModule
   ],
   providers: [EmployeeService, EmployeeListResolverService, InventoryService ],
   bootstrap: [AppComponent]

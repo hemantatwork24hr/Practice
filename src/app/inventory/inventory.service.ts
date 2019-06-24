@@ -7,10 +7,10 @@ import { Observable } from 'rxjs';
 })
 export class InventoryService {
 
-	private serviceUrl ='https://jsonplaceholder.typicode.com/users';
+	private serviceUrl = 'https://jsonplaceholder.typicode.com/users';
 
 	  constructor( private http: HttpClient ) { }
-	  
+
 	  getCards(): Observable< Inventory[] > {
 		  return this.http.get<Inventory[]>( this.serviceUrl );
 	  }

@@ -10,11 +10,11 @@ describe('CreateEmployeeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports:[
+      imports: [
         ReactiveFormsModule
       ],
-      declarations: [ 
-        CreateEmployeeComponent 
+      declarations: [
+        CreateEmployeeComponent
       ]
     })
     .compileComponents();

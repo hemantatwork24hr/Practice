@@ -9,7 +9,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class CreateEmployeeComponent implements OnInit {
 
   employeeForm: FormGroup;
-  public workers: any[] = [ 
+  public workers: any[] = [
     { x: 'first', y : '1st'},
     { x: 'second', y : '2nd'},
     { x: 'third', y : '3rd'},
@@ -21,7 +21,7 @@ export class CreateEmployeeComponent implements OnInit {
     this.employeeForm = new FormGroup( {
       fullName: new FormControl(),
       email: new FormControl()
-    })
+    });
   }
 
   onSubmit(): void {

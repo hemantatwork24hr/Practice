@@ -20,19 +20,19 @@ export class ListEmployeesComponent implements OnInit, AfterViewInit {
 	public employees: IEmployee[];
 
 	displayedColumns: string[] = ['id', 'employee_name', 'employee_age', 'employee_salary'];
-	dataSource = new MatTableDataSource< IEmployee >( this._route.snapshot.data['employeeList'] );
-  
-	@ViewChild( MatSort ) sort: MatSort;
-	
+	dataSource = new MatTableDataSource< IEmployee >( this._route.snapshot.data.employeeList );
+
+	// @ViewChild( MatSort,{ static: true } ) sort: MatSort;
+
 	@ViewChild( MatPaginator, {static: true}) paginator: MatPaginator;
-  
+
 	ngOnInit() {
 		this.dataSource.paginator = this.paginator;
-		this.dataSource.sort = this.sort;
+		// this.dataSource.sort = this.sort;
 	}
 
 	constructor( private _route: ActivatedRoute ) {
-		//this.employees = this._route.snapshot.data['employeeList'];
+		// this.employees = this._route.snapshot.data['employeeList'];
 		this.calculateMargin();
 	}
 
